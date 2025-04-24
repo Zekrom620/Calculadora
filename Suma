@@ -1,0 +1,26 @@
+def sumar(num1, num2):
+    return num1 + num2
+
+# Función principal
+def calculadora():
+    print("Bienvenido a la calculadora de suma")
+    
+    # Solicitar el primer número al usuario
+    try:
+        num1 = float(input("Ingresa el primer número: "))
+    except ValueError:
+        print("Por favor, ingresa un número válido.")
+        return
+    
+    # Solicitar el segundo número al usuario
+    try:
+        num2 = float(input("Ingresa el segundo número: "))
+    except ValueError:
+        print("Por favor, ingresa un número válido.")
+        return
+    
+    # Realizar la operación de suma
+    resultado = sumar(num1, num2)
+    
+    # Mostrar el resultado
+    print(f"La suma de {num1} + {num2} es: {resultado}")
