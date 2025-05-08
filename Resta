@@ -1,0 +1,54 @@
+# Función para sumar
+def sumar(num1, num2):
+    return num1 + num2
+
+# Función para restar
+def restar(num1, num2):
+    return num1 - num2
+
+# Función principal
+def calculadora():
+    print("Bienvenido a la calculadora")
+
+    # Solicitar el primer número al usuario
+    try:
+        num1 = float(input("Ingresa el primer número: "))
+    except ValueError:
+        print("Por favor, ingresa un número válido.")
+        return
+    
+    # Solicitar el segundo número al usuario
+    try:
+        num2 = float(input("Ingresa el segundo número: "))
+    except ValueError:
+        print("Por favor, ingresa un número válido.")
+        return
+    
+    # Mostrar las opciones de operaciones
+    print("\nSelecciona la operación que deseas realizar:")
+    print("1. Sumar")
+    print("2. Restar")
+    
+    # Solicitar la opción de operación al usuario
+    try:
+        opcion = int(input("Ingresa el número de la operación: "))
+    except ValueError:
+        print("Por favor, ingresa una opción válida.")
+        return
+    
+    # Realizar la operación seleccionada
+    if opcion == 1:
+        resultado = sumar(num1, num2)
+        operacion = "+"
+    elif opcion == 2:
+        resultado = restar(num1, num2)
+        operacion = "-"
+    else:
+        print("Opción no válida.")
+        return
+    
+    # Mostrar el resultado
+    print(f"\nEl resultado de {num1} {operacion} {num2} es: {resultado}")
+
+# Llamar a la función principal para iniciar la calculadora
+calculadora()
